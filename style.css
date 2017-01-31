@@ -262,6 +262,13 @@ a img {
     left: 0px;
 }
 
+.breadcrumbs {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ccb658;
+    padding: 0 0 14px;
+    font-size: 14px;
+}
+
 #lightSlider {
     position: relative;
     top: 5px;
@@ -310,7 +317,7 @@ a img {
     #main .offers-block .offer {
         display: inline-table;
         width: 140px;
-        margin: 26px 1.59% 0;
+        margin: 26px 1.56% 0;
     }
     #main .offers-block .offer img {
         border-radius: 50%;
@@ -347,12 +354,35 @@ a img {
         z-index: 1;
         padding-top: 95px;
         font-size: 40px;
-        font-family: 'RobotoRegular', sans-serif;
+        font-family: 'Anglecia', sans-serif;
         text-shadow: 3px 4px 6px black;
+    }
+
+    #content .article {
+        margin: 50px 0;
+        clear: both;
+        height: 180px;
+        font-size: 17px;
+    }
+
+    #content .article h2 {
+        font-family: 'Anglecia', sans-serif;
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    #content .article .content-thumb {
+        float: left;
+        margin-right: 30px;
+        max-width: 270px;
+        max-height: 180px;
+        overflow: hidden;
     }
 
 .content-single {
     padding: 20px 5px 0;
+    width: calc(100% - 300px);
+    float: left;
 }
     #content .content-single h1 {
         padding: 30px 80px;
@@ -362,7 +392,6 @@ a img {
 
     #content .content-single p {
         padding: 10px 0;
-        font-family: 'RobotoRegular', sans-serif;
     }
 
     #content .content-single ul, .content-single ol {
@@ -378,6 +407,56 @@ blockquote {
     padding: 1em 40px;
     background: url(images/quote.gif) no-repeat 0px 20px;
 }
+
+.gallery {
+    text-align: center;
+}
+
+.gallery figure {
+    display: inline-block;
+    margin: 10px;
+}
+
+.gallery-icon img {
+    border-radius: 10px;
+    border: 2px solid dimgrey;
+}
+
+.gallery-icon img:hover {
+    opacity: 0.8;
+}
+
+/*************Sidebar*********/
+#sidebar {
+    width: 250px;
+    float: right;
+    padding: 20px 0;
+    font-family: 'RobotoLight', sans-serif;
+}
+    #sidebar section {
+        margin-bottom: 24px;
+    }
+
+    #sidebar section div {
+        padding: 10px 0 0 15px;
+    }
+
+    #sidebar section ul li {
+        list-style-image: url(images/check.png);
+        list-style-position: inside;
+    }
+
+    #sidebar section a:hover {
+        color: #ccb658;
+    }
+
+    #sidebar section .widget-title {
+        font-family: 'Anglecia', sans-serif;
+        font-size: 18px;
+        text-transform: uppercase;
+        border-bottom: 2px solid #ccb658;
+        padding: 0 15px 9px;
+    }
 
 /*************404************/
 
@@ -398,6 +477,7 @@ blockquote {
     font-family: 'RobotoLight', sans-serif;
     font-size: 12px;
     font-weight: 600;
+    clear: both;
 }
 
 #footer .copyrights {

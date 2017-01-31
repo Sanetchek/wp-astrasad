@@ -15,7 +15,7 @@ function astrasad_uslugi() {
             'all_items' => 'Все услуги',
             'add_new' => 'Добавить новую',
             'add_new_item' => 'Добавить услугу',
-            'singular_name'      => 'Услуга',
+            'singular_name'      => 'Услуги',
             'edit_item'          => 'Редактировать услугу',
             'new_item'           => 'Новая услуга',
             'view_item'          => 'Посмотреть услугу',

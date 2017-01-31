@@ -73,6 +73,23 @@ function astrasad_scripts()
 }
 add_action('wp_enqueue_scripts', 'astrasad_scripts');
 
+
+/**
+ * Registers a widget area.
+ */
+function astrasad_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Sidebar'),
+        'id'            => 'sidebar',
+        'description'   => __( 'Add widgets here to appear in your sidebar.'),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'astrasad_widgets_init' );
+
 /*
  *  Translate string in Polylang
  */
@@ -85,3 +102,10 @@ function transl_polylang() {
     }
 }
 add_action ( 'admin_init', 'transl_polylang' );
+
+/*
+ *  Excerpt more
+ */
+add_filter('excerpt_more', function($more) {
+    return '...';
+});

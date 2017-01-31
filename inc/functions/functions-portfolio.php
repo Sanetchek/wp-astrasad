@@ -15,7 +15,7 @@ function astrasad_portfolio() {
             'all_items' => 'Все работы',
             'add_new' => 'Добавить новую',
             'add_new_item' => 'Добавить работу',
-            'singular_name'      => 'Работа',
+            'singular_name'      => 'Работы',
             'edit_item'          => 'Редактировать работу',
             'new_item'           => 'Новая рабта',
             'view_item'          => 'Посмотреть работу',
