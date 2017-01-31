@@ -15,12 +15,7 @@
 
     <?php wp_head(); ?>
 </head>
-<body>
-<?php
-if (is_page( 'portfolio' ) ):
-    wp_redirect( bloginfo('template_url') . '/rabotyi' );
-endif;
-?>
+<body <?php body_class(); ?>>
 <header id="header" class="container">
     <?php
     $site_email = get_option('site_email');

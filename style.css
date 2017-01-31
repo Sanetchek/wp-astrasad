@@ -379,6 +379,10 @@ a img {
         overflow: hidden;
     }
 
+.content {
+    padding: 20px 5px 0;
+}
+
 .content-single {
     padding: 20px 5px 0;
     width: calc(100% - 300px);
@@ -476,7 +480,6 @@ blockquote {
     padding: 21px 0;
     font-family: 'RobotoLight', sans-serif;
     font-size: 12px;
-    font-weight: 600;
     clear: both;
 }
 

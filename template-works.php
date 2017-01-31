@@ -14,7 +14,7 @@
             <h1><?php the_title(); ?></h1>
             <div class="overlay"></div>
         </div>
-        <div class="content-single container">
+        <div class="content container">
             <?php if (function_exists('astrasad_breadcrumbs')) astrasad_breadcrumbs(); ?>
             <?php the_content(); ?>
         </div>
