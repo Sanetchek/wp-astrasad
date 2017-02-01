@@ -1,0 +1,32 @@
+.navigation {
+    font-size: 20px;
+}
+
+.navigation .prev {
+    float: left;
+    border: 1px solid #000;
+    color: #fff;
+    background-color: #000;
+}
+
+.navigation .prev:hover, .navigation .next:hover {
+    background-color: #ccb659;
+    border: 1px solid #000;
+    color: #000;
+}
+
+.navigation .next {
+    float: right;
+    border: 1px solid #000;
+    color: #fff;
+    background-color: #000;
+}
+
+.navigation a, .navigation span {
+    display: inline-block;
+    padding: 6px 15px;
+}
+
+.navigation a:hover, .navigation .current {
+    border-bottom: 1px solid #ccb659;
+}

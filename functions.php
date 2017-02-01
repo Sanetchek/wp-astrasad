@@ -18,6 +18,8 @@ if ( ! function_exists( 'astrasad_setup' ) ) :
         require_once( 'inc/functions/functions-media.uploader.php' );
         require_once( 'inc/functions/functions-breadcrumbs.php' );
         require_once( 'inc/functions/functions-site-data.php' );
+        require_once( 'inc/functions/functions-nav.php' );
+
 
         // Add default posts and comments RSS feed links to head.
         add_theme_support( 'automatic-feed-links' );
@@ -92,7 +94,7 @@ add_action( 'widgets_init', 'astrasad_widgets_init' );
 
 /*
  *  Translate string in Polylang
- */
+
 function transl_polylang() {
     $company_name = get_option('footer_company_name');
     $all_rights = get_option('footer_all_rights');
@@ -102,10 +104,12 @@ function transl_polylang() {
     }
 }
 add_action ( 'admin_init', 'transl_polylang' );
+ */
+
 
 /*
  *  Excerpt more
  */
 add_filter('excerpt_more', function($more) {
-    return '...';
+    return ' ...';
 });

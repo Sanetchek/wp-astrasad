@@ -14,11 +14,17 @@
                 </div>
 
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                <p><?php the_excerpt(); ?></p>
+                <?php the_excerpt(); ?>
+                <div class="clearfix"></div>
             </article>
 
         <?php endwhile; ?>
             <!-- post navigation -->
+            <?php
+            if(function_exists('astrasad_pagenavi')) {
+                astrasad_pagenavi( '<center>', '</center>' );
+            }
+            ?>
         <?php else: ?>
             <!-- no posts found -->
         <?php endif; ?>
