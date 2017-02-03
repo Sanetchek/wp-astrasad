@@ -2,7 +2,7 @@
 
     <?php
 
-        get_template_part('inc/template-part/slider')
+        get_template_part('inc/template-part/bxslider')
 
     ?>
 

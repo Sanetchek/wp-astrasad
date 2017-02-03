@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <?php get_template_part('inc/template-part/slider') ?>
+    <?php get_template_part('inc/template-part/bxslider') ?>
 
 <div class="container">
     <?php if (function_exists('astrasad_breadcrumbs')) astrasad_breadcrumbs(); ?>

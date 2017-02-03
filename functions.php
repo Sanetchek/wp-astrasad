@@ -67,11 +67,11 @@ endif; // astrasad_setup
 
 function astrasad_scripts()
 {
-    wp_enqueue_script('lightsliderjs', get_template_directory_uri() . '/lightslider/js/lightslider.js', array('jquery'), '1.0.0', true);
     wp_enqueue_script('script', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', true);
-
     wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
-    wp_enqueue_style('lightsliderstyle', get_template_directory_uri() . '/lightslider/css/lightslider.css');
+
+    wp_enqueue_script('bxslider', get_template_directory_uri() . '/bxslider/jquery.bxslider.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_style('bxstyle', get_template_directory_uri() . '/bxslider/jquery.bxslider.css');
 }
 add_action('wp_enqueue_scripts', 'astrasad_scripts');
 
