@@ -424,6 +424,7 @@ blockquote {
 
 /*************Sidebar*********/
 #sidebar {
+    display: block;
     width: 250px;
     float: right;
     padding: 20px 0;
@@ -509,12 +510,6 @@ blockquote {
     }
 
 @media all and (max-width: 1080px) {
-    #lightSlider {
-        max-height: 400px;
-    }
-    #lightSlider li {
-        height: 400px;
-    }
     .wrapper {
         max-width: 481px;
         margin-left: -240px;
@@ -527,6 +522,12 @@ blockquote {
     }
     #toggle-menu {
         display: block;
+    }
+    #sidebar {
+        display: none;
+    }
+    .content-single {
+        width: 98%;
     }
 }
 

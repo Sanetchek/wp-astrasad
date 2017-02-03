@@ -10,36 +10,26 @@
  * http://bxcreative.com
  */
 
-
+.page-wrapper {
+    height: 119px;
+    text-align: center;
+    margin: -125px auto 0 !important;
+}
 
 .bxslider li {
 	height: 520px;
-	background-size: 130%;
+	background-repeat: no-repeat;
 	background-position: center;
-}
-
-#bx-pager {
-    height: 105px;
-    width: 52.5%;
-    overflow: hidden;
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    margin-left: -25%;
-    text-align: center;
 }
 
 #bx-pager a {
     display: inline;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    margin-right: 28px;
 }
 
 #bx-pager a img {
     border-radius: 50%;
-    width: 100px;
+    width: 95px;
     border: 2px solid #fff;
 }
 
