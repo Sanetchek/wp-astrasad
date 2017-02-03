@@ -1,10 +1,11 @@
 jQuery(document).ready(function ($){
     var slider = $('.bxslider').bxSlider({
         pagerCustom: '#bx-pager',
-        auto: false,
-        pause: 6000,
+        auto: true,
+        pause: 2000,
         onSlideBefore:function($slideElement, oldIndex, newIndex){
             changeRealThumb(pager, newIndex);
+
         }
     });
 
@@ -22,8 +23,9 @@ jQuery(document).ready(function ($){
     function changeRealThumb(slider,newIndex){
 
         var $thumbS=$("#bx-pager");
-        $thumbS.find('.active').removeClass("active");
-        $thumbS.find('a[data-slide-index="' + newIndex + '"]').addClass("active");
+
+        $thumbS.find(".active").next().addClass("active");
+        $thumbS.find(".active").removeClass("active");
 
         if( slider.getSlideCount() - newIndex >= 4 ) {
             slider.goToSlide(newIndex);

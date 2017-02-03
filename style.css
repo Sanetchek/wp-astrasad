@@ -382,7 +382,7 @@ a img {
     float: left;
 }
     .content-single .breadcrumbs {
-        margin-bottom: 30px;
+        margin: 0 0 30px;
         border-bottom: 2px solid #ccb658;
         padding: 0 0 14px;
         font-size: 14px;
