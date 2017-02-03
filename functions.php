@@ -108,8 +108,13 @@ add_action ( 'admin_init', 'transl_polylang' );
 
 
 /*
- *  Excerpt more
+ *  Excerpt
  */
 add_filter('excerpt_more', function($more) {
     return ' ...';
 });
+
+function my_excerpt_length( $length ) {
+    return 42;
+}
+add_filter( 'excerpt_length', 'my_excerpt_length' );

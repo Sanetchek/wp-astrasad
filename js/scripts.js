@@ -5,7 +5,6 @@ jQuery(document).ready(function ($){
         pause: 6000,
         onSlideBefore:function($slideElement, oldIndex, newIndex){
             changeRealThumb(pager, newIndex);
-
         }
     });
 
@@ -17,17 +16,20 @@ jQuery(document).ready(function ($){
         slideMargin: 28,
         pager: false,
         wrapperClass: 'page-wrapper',
-        controls: true,
-        infiniteLoop: false,
+        controls: false,
+        infiniteLoop: false
     });
     function changeRealThumb(slider,newIndex){
 
         var $thumbS=$("#bx-pager");
         $thumbS.find('.active').removeClass("active");
-        $thumbS.find('a[slideIndex="' + newIndex + '"]').addClass("active");
+        $thumbS.find('a[data-slide-index="' + newIndex + '"]').addClass("active");
 
-        if( slider.getSlideCount() - newIndex >= 4 ) slider.goToSlide(newIndex);
-        else slider.goToSlide(slider.getSlideCount()-4);
+        if( slider.getSlideCount() - newIndex >= 4 ) {
+            slider.goToSlide(newIndex);
+        } else {
+            slider.goToSlide(slider.getSlideCount()-4);
+        }
 
     }
 });
