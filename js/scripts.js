@@ -2,7 +2,7 @@ jQuery(document).ready(function ($){
     var slider = $('.bxslider').bxSlider({
         pagerCustom: '#bx-pager',
         auto: true,
-        pause: 2000,
+        pause: 6000,
         onSlideBefore:function($slideElement, oldIndex, newIndex){
             changeRealThumb(pager, newIndex);
 
