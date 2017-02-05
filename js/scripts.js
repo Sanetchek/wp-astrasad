@@ -20,18 +20,37 @@ jQuery(document).ready(function ($){
         controls: false,
         infiniteLoop: false
     });
+
+    var prevIndex = 0;
+
     function changeRealThumb(slider,newIndex){
 
         var $thumbS=$("#bx-pager");
+        var slideCount = slider.getSlideCount();
+        var lastThreeSlides = slideCount - 2;
 
         $thumbS.find(".active").next().addClass("active");
         $thumbS.find(".active").removeClass("active");
 
-        if( slider.getSlideCount() - newIndex >= 4 ) {
-            slider.goToSlide(newIndex);
-        } else {
-            slider.goToSlide(slider.getSlideCount()-4);
+        if ( (newIndex == 0) && (newIndex < prevIndex) ){
+            slider.goToSlide(0);
+            prevIndex = newIndex;
         }
-
+        else if( newIndex < 3 ) {
+            slider.goToSlide(0);
+            prevIndex = newIndex;
+        }
+        else if( newIndex+1 == slideCount ) {
+            slider.goToSlide(newIndex-4);
+            prevIndex = newIndex;
+        }
+        else if( newIndex < prevIndex && newIndex < lastThreeSlides ) {
+            slider.goToSlide(newIndex - 2);
+            prevIndex = newIndex;
+        }
+        else if( newIndex > prevIndex && newIndex < lastThreeSlides ) {
+            slider.goToSlide(newIndex - 2);
+            prevIndex = newIndex;
+        }
     }
 });
