@@ -38,6 +38,7 @@ body {
 
 .container {
     max-width: 1060px;
+    min-width: 320px;
     margin: 0 auto;
 }
 
@@ -521,6 +522,14 @@ blockquote {
         max-width: 481px;
         margin-left: -240px;
     }
+    #content .content-img {
+        background-attachment: inherit;
+        background-position: center;
+        background-size: 200%;
+    }
+    #content .article {
+        padding: 0 20px;
+    }
 }
 
 @media all and (max-width: 757px) {
@@ -550,21 +559,16 @@ blockquote {
         display: block;
         margin-bottom: 3px;
     }
-    .page-wrapper {
-        max-width: 500px !important;
-    }
 }
 
-@media all and (max-width: 500px) {
-    .page-wrapper {
-        max-width: 360px !important;
+@media all and (max-width: 520px) {
+    #content .article .content-thumb {
+        float: none;
+        margin: 0 0 10px;
     }
 }
 
 @media all and (max-width: 400px) {
-    .page-wrapper {
-        max-width: 230px !important;
-    }
     #footer .copyrights {
         margin-top: 20px;
     }

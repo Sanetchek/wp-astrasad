@@ -32,25 +32,41 @@ jQuery(document).ready(function ($){
         $thumbS.find(".active").next().addClass("active");
         $thumbS.find(".active").removeClass("active");
 
-        if ( (newIndex == 0) && (newIndex < prevIndex) ){
-            slider.goToSlide(0);
-            prevIndex = newIndex;
-        }
-        else if( newIndex < 3 ) {
-            slider.goToSlide(0);
-            prevIndex = newIndex;
-        }
-        else if( newIndex+1 == slideCount ) {
-            slider.goToSlide(newIndex-4);
-            prevIndex = newIndex;
-        }
-        else if( newIndex < prevIndex && newIndex < lastThreeSlides ) {
-            slider.goToSlide(newIndex - 2);
-            prevIndex = newIndex;
-        }
-        else if( newIndex > prevIndex && newIndex < lastThreeSlides ) {
-            slider.goToSlide(newIndex - 2);
-            prevIndex = newIndex;
+        if ( $( window ).width() < 710 ) {
+            if ( (newIndex == 0) && (newIndex < prevIndex) ){
+                slider.reloadSlider();
+                prevIndex = newIndex;
+            }
+            else if( newIndex < prevIndex) {
+                slider.goToSlide(newIndex);
+                prevIndex = newIndex;
+            }
+            else if( newIndex > prevIndex) {
+                slider.goToSlide(newIndex);
+                prevIndex = newIndex;
+            }
+
+        } else {
+            if ( (newIndex == 0) && (newIndex < prevIndex) ){
+                slider.goToSlide(0);
+                prevIndex = newIndex;
+            }
+            else if( newIndex < 3 ) {
+                slider.goToSlide(0);
+                prevIndex = newIndex;
+            }
+            else if( newIndex + 1 == slideCount ) {
+                slider.goToSlide(newIndex - 4);
+                prevIndex = newIndex;
+            }
+            else if( newIndex < prevIndex && newIndex < lastThreeSlides ) {
+                slider.goToSlide(newIndex - 2);
+                prevIndex = newIndex;
+            }
+            else if( newIndex > prevIndex && newIndex < lastThreeSlides ) {
+                slider.goToSlide(newIndex - 2);
+                prevIndex = newIndex;
+            }
         }
     }
 });
