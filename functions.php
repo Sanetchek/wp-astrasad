@@ -94,7 +94,7 @@ add_action( 'widgets_init', 'astrasad_widgets_init' );
 
 /*
  *  Translate string in Polylang
-
+*/
 function transl_polylang() {
     $company_name = get_option('footer_company_name');
     $all_rights = get_option('footer_all_rights');
@@ -104,7 +104,7 @@ function transl_polylang() {
     }
 }
 add_action ( 'admin_init', 'transl_polylang' );
- */
+
 
 
 /*
