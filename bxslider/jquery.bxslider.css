@@ -39,6 +39,13 @@
     border: 2px solid #ccb658;
 }
 
+.bx-wrapper .bx-viewport {
+	background: #999;
+}
+
+.bxslider {
+	visibility: hidden;
+}
 
 /** RESET AND LAYOUT
 ===================================*/

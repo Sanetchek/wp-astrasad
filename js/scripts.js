@@ -3,6 +3,9 @@ jQuery(document).ready(function ($){
         pagerCustom: '#bx-pager',
         auto: true,
         pause: 6000,
+        onSliderLoad: function(){
+            $(".bxslider").css("visibility", "visible");
+        },
         onSlideBefore:function($slideElement, oldIndex, newIndex){
             changeRealThumb(pager, newIndex);
 
